@@ -6,9 +6,9 @@
   />
 </div>
 
-<div class="residences-container">
+<div class="container">
   @for (residence of getFilteredResidences(); track $index) {
-    <div class="residence-card">
+    <div class="card">
       <img [src]="residence.image" [alt]="residence.name" />
       <h3>{{ residence.name }}</h3>
 
@@ -36,6 +36,44 @@
       <button (click)="addToFavorites(residence)">
         <i class="fas fa-heart"></i> Like
       </button>
+    </div>
+  }
+</div>
+
+<!-- Liked locations -->
+<h2>Favorites</h2>
+<div class="container">
+  @for (location of favorites; track $index) {
+    <div class="liked-locations-container">
+      <div class="card">
+        <img [src]="location.image" [alt]="location.name" />
+        <h3>{{ location.name }}</h3>
+
+        <div class="status-indicator">
+          <span
+            [ngClass]="{
+              disponible: location.status === 'Disponible',
+              'en-construction': location.status === 'En Construction',
+              vendu: location.status === 'Vendu',
+            }"
+          >
+            {{ location.status }}
+            <i
+              class="fas"
+              [ngClass]="{
+                'fa-check': location.status === 'Disponible',
+                'fa-hard-hat': location.status === 'En Construction',
+                'fa-lock': location.status === 'Vendu',
+              }"
+            ></i>
+          </span>
+        </div>
+
+        <button (click)="showLocation(location.address)">Show Location</button>
+        <button (click)="removeFromFavorites(location)">
+          <i class="fas fa-heart"></i> unlike
+        </button>
+      </div>
     </div>
   }
 </div>

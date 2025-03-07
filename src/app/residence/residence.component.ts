@@ -39,6 +39,10 @@ export class ResidenceComponent {
         this.favorites.push(residence);
       }
     }
+
+    removeFromFavorites(residence: Residence) {
+      this.favorites = this.favorites.filter(favorite => favorite !== residence);
+    }
   
     getFilteredResidences() {
       return this.listResidences.filter(residence =>

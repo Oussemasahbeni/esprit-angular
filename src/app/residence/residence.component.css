@@ -7,20 +7,20 @@
     width: 300px;
   }
   
-  .residences-container {
+  .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
   }
   
-  .residence-card {
+  .card {
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 8px;
   }
   
-  .residence-card img {
+  .card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
