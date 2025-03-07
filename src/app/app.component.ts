@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   standalone: false,
   template: `
+    <app-navbar></app-navbar>
     <router-outlet/>
     `,
   styleUrl: './app.component.css'

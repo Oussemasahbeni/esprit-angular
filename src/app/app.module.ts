@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { HomeComponent } from './home/home.component';
 import { ResidenceComponent } from './residence/residence.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -14,7 +15,8 @@ import { ResidenceComponent } from './residence/residence.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    ResidenceComponent
+    ResidenceComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
