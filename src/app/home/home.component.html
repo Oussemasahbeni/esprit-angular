@@ -1,0 +1,33 @@
+<h1 class="text-center my-4">{{ title }}</h1>
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    @for (product of products; track $index) {
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img
+            [src]="product.image"
+            [alt]="product.name"
+            class="card-img-top p-3"
+            style="object-fit: contain; height: 200px"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text text-primary fw-bold">${{ product.price }}</p>
+            <div class="d-flex gap-2 mt-3">
+              <button
+                class="btn btn-primary flex-grow-1"
+                (click)="buy(product)"
+              >
+                <i class="bi bi-cart-plus"></i> Buy
+              </button>
+              <button class="btn btn-outline-secondary">
+                <i class="bi bi-bookmark-heart"></i> Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

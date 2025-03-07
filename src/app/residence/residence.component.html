@@ -1,0 +1,41 @@
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchAddress"
+    placeholder="Rechercher par adresse..."
+  />
+</div>
+
+<div class="residences-container">
+  @for (residence of getFilteredResidences(); track $index) {
+    <div class="residence-card">
+      <img [src]="residence.image" [alt]="residence.name" />
+      <h3>{{ residence.name }}</h3>
+
+      <div class="status-indicator">
+        <span
+          [ngClass]="{
+            disponible: residence.status === 'Disponible',
+            'en-construction': residence.status === 'En Construction',
+            vendu: residence.status === 'Vendu',
+          }"
+        >
+          {{ residence.status }}
+          <i
+            class="fas"
+            [ngClass]="{
+              'fa-check': residence.status === 'Disponible',
+              'fa-hard-hat': residence.status === 'En Construction',
+              'fa-lock': residence.status === 'Vendu',
+            }"
+          ></i>
+        </span>
+      </div>
+
+      <button (click)="showLocation(residence.address)">Show Location</button>
+      <button (click)="addToFavorites(residence)">
+        <i class="fas fa-heart"></i> Like
+      </button>
+    </div>
+  }
+</div>

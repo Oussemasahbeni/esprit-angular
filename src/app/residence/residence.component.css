@@ -1,0 +1,50 @@
+.search-container {
+    margin: 20px 0;
+  }
+  
+  .search-container input {
+    padding: 8px;
+    width: 300px;
+  }
+  
+  .residences-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .residence-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .residence-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .status-indicator {
+    margin: 10px 0;
+  }
+  
+  .disponible {
+    color: green;
+  }
+  
+  .en-construction {
+    color: orange;
+  }
+  
+  .vendu {
+    color: red;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
