@@ -1,0 +1,36 @@
+.not-found-container {
+  text-align: center;
+  padding: 50px;
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 120px;
+  margin: 0;
+  color: #e74c3c;
+}
+
+h2 {
+  font-size: 32px;
+  margin: 20px 0;
+}
+
+p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
